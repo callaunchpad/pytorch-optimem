@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pytorch-optimem
+Version: 0.0.1
+Summary: Optimem is a library to reduce the GPU memory footprint of PyTorch models
+Author-email: Jimmy Li <jimmyli2002@gmail.com>, Mehul Raheja <mraheja@berkeley.edu>
+Project-URL: Homepage, https://github.com/callaunchpad/pytorch-optimem
+Project-URL: Bug Tracker, https://github.com/callaunchpad/pytorch-optimem/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pytorch-optimem
+A Python package for reducing memory footprint of PyTorch models
