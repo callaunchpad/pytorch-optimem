@@ -1,6 +1,6 @@
 [project]
 name = "pytorch-optimem"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Jimmy Li", email="jimmy.li@berkeley.com" }, { name="Mehul Raheja", email="mraheja@berkeley.edu" },
 ]
