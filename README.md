@@ -8,26 +8,36 @@ It is well known that GPUs are much faster for deep learning applications as the
 Install the package using pip
 `pip install --upgrade pytorch-optimem`
 
-PyTorch Optimem offers two modes, `page` or `chunk`. 
+PyTorch Optimem offers two modes, `page` or `chunk`. For both modes, the model must be on the GPU.
 
 #### Paging
 
-Optimem in paging mode attempts to GPU page the input model for all layers. This means we move pieces of the model to and from the GPU which has it's own pros and cons.
+Optimem in paging mode attempts to GPU page the input model for all layers. This means we move pieces of the model to and from the GPU which has it's own pros and cons. 
+
+NOTE: The data tensor must start on GPU.
 
 ```python
-from optimem import page
+import optimem
 
 resnet = torchvision.models.resnet101(pretrained=True).eval()
-paged_resent = page(resnet)
+paged_resent = optimem.page(resnet)
 ```
+
+There are two optional parameters, device which is the device to page the model into (typically a GPU), and max_layer_size which is the maximum number of parameters we wish to page at a time between the CPU and GPU.
 
 #### Chunking
 
 Optimem in chunking mode attempts to identify the largest chunk of the model which can be loaded in the GPU and stores that in the GPU VRAM. 
 
+NOTE: The data tensor must start on CPU.
+
 ```python
-from optimem import chunk
+import optimem
 
 resnet = torchvision.models.resnet101(pretrained=True).eval()
-chunked_resnet = chunk(resnet)
+chunked_resnet = optimem.chunk(resnet)
 ```
+
+There are two optional parameters, device which is the device we will chunk the model into (typically a GPU), and max_capacity which is the maximum number of parameters we wish to store on the target device.
+
+
