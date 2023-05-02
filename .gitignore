@@ -1,0 +1,3 @@
+dist/*
+src/__pycache__/*
+src/pytorch_optimem.egg-info/*

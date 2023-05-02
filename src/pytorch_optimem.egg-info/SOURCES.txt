@@ -1,9 +1,8 @@
 LICENSE
 README.md
 pyproject.toml
-src/__init__.py
-src/main.py
-src/memory_utils.py
+src/optimem/__init__.py
+src/optimem/main.py
 src/pytorch_optimem.egg-info/PKG-INFO
 src/pytorch_optimem.egg-info/SOURCES.txt
 src/pytorch_optimem.egg-info/dependency_links.txt

@@ -1,12 +1,12 @@
 [project]
 name = "pytorch-optimem"
-version = "0.0.2"
+version = "0.0.5"
 authors = [
   { name="Jimmy Li", email="jimmy.li@berkeley.com" }, { name="Mehul Raheja", email="mraheja@berkeley.edu" },
 ]
 description = "Optimem is a library to reduce the GPU memory footprint of PyTorch models"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.6"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
