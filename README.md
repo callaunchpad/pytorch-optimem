@@ -21,7 +21,7 @@ PyTorch Optimem offers two modes, `page` or `chunk`. For both modes, the model m
 
 Paging mode pages the input model between the RAM and vRAM during inference. At a customizable granularity, it moves chunks of the model to the GPU or other hardware "on the fly" while maintaining the data on the GPU throughout. An illustration of the process is shown below.
 
-![Screen-Recording-2023-05-02-at-5 28 39-PM_1](https://user-images.githubusercontent.com/8518898/235813251-08200476-a4fb-4ec4-b3c0-b50cdca371e8.gif)
+![final-gif](https://user-images.githubusercontent.com/8518898/235817427-fa7bd2ad-1733-4b91-a07e-f57700567be2.gif)
 
 **Usage:**
 ```python
