@@ -77,6 +77,7 @@ paged_resent = optimem.chunk(resnet)
 ```
 
 NOTE: The data tensor must start on CPU.
+
 NOTE: The higher the max_capacity 
 
 Performance results for passing in 512x512 images into ResNet-101 are shown below:
