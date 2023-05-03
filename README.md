@@ -38,7 +38,7 @@ import torchvision
 import optimem
 
 resnet = torchvision.models.resnet101(pretrained=True).eval()
-paged_resent = optimem.page(resnet)
+optimem.page(resnet)
 ```
 
 NOTE: The data tensor must start on GPU.
@@ -73,7 +73,7 @@ import torchvision
 import optimem
 
 resnet = torchvision.models.resnet101(pretrained=True).eval()
-paged_resent = optimem.chunk(resnet)
+optimem.chunk(resnet)
 ```
 
 NOTE: The data tensor must start on CPU.
