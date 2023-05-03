@@ -78,9 +78,9 @@ paged_resent = optimem.chunk(resnet)
 
 NOTE: The data tensor must start on CPU.
 
-NOTE: The higher the max_capacity 
+NOTE: Higher `max_capacity` increases the performance but also adds to the GPU utilization 
 
-Performance results for passing in 512x512 images into ResNet-101 are shown below:
+Performance results for passing in 512x512 images into ResNet-101 are shown below with half the model chunk loaded on the GPU:
 <img width="748" alt="image" src="https://user-images.githubusercontent.com/8518898/235816226-efd4d076-b6b8-47ef-ad9a-f71801b53833.png">
 
 
