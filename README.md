@@ -42,6 +42,7 @@ paged_resent = optimem.page(resnet)
 ```
 
 NOTE: The data tensor must start on GPU.
+
 NOTE: `max_layer_size` exists to customize how much GPU is being used. For example, ResNet has "block" modules with multiple conv layers + max pooling and if `max_layer_size` is set high enough those will be paged all at once instead of each layer being paged invidually.
 
 Performance results for passing in 512x512 images into ResNet-101 are shown below:
@@ -49,7 +50,7 @@ Performance results for passing in 512x512 images into ResNet-101 are shown belo
 <img width="672" alt="image" src="https://user-images.githubusercontent.com/8518898/235816037-832b0ae0-05a2-4c9b-a0c1-b2b42d1629e8.png">
 
 
-#### Chunking
+### Chunking
 
 Chunking mode identifies the largest chunk of the model which can be loaded to the GPU and permanently stores it in the vRAM. It also adds the pipelining that allows the model to convert the data to the right type throughout the process.
 
